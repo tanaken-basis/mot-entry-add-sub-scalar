@@ -863,11 +863,11 @@ export default function App() {
   }, [A, B, C, k, dims.rows, dims.cols, op, entryPos]);
 
   const config = {
-    loader: { load: ["input/tex", "output/chtml"] },
+    loader: { load: ["input/tex", "output/chtml", "[tex]/color", "[tex]/textmacros"] },
     tex: {
       inlineMath: [["$", "$"], ["\\(", "\\)"]],
       displayMath: [["$$", "$$"], ["\\[", "\\]"]],
-      packages: { "[+]": ["base", "ams"] },
+      packages: { "[+]": ["base", "ams", "color", "textmacros"] },
     },
   };
 
